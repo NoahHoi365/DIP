@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HOOOI</title>
+    <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
+  </head>
+  <body>
+  <h1>MOOI PLAATJE</h1>
+    <script>
+var GameState = {
+
+  preload: function() {
+    this.load.image('sprite', 'rave.jpg');
+  },
+
+  create: function() {
+    this.background = this.game.add.sprite(0, 0, 'sprite');
+  }
+
+
+};
+
+var game = new Phaser.Game(1920, 1080, Phaser.AUTO);
+
+game.state.add('GameState', GameState);
+game.state.start('GameState');
+    </script>
+  </body>
+</html>
